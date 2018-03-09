@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/mindgrub.css" id="theme">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -37,6 +37,17 @@
 	<body>
 
 		<div class="reveal">
+			<!-- Global footer -->
+			<div class='footer'>
+				<div class="left">
+					<img src="assets/mindgrub-logo.png"/>
+				</div>
+				<div class="right">
+					<span><a href="https://www.drupal.org/u/aczietlow">Chris Zietlow</a></span>
+					<span><a href="http://aczietlow.github.io/behat/">Intro to Behat</a></span>
+					<span><a href="https://twitter.com/aczietlow">@aczietlow</a></span>
+				</div>
+			</div>
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
@@ -378,6 +389,8 @@ Reveal.addEventListener( 'customevent', function() {
 
 		</div>
 
+		<script src="lib/js/jquery-3.3.1.min.js"></script>
+		<script src="js/mindgrub.js"></script>
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 
@@ -404,6 +417,12 @@ Reveal.addEventListener( 'customevent', function() {
 				]
 			});
 
+		</script>
+		<script>
+            // displayed upon load, hides when slide changes
+            Reveal.addEventListener('slidechanged', function(event) {
+                document.querySelector('.reveal .footer').style.display = 'none';
+            });
 		</script>
 
 	</body>
